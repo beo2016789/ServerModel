@@ -3,6 +3,8 @@ import librosa
 import numpy as np
 import math
 import pickle
+import warnings
+warnings.filterwarnings("ignore")
 
 labels = ["BK", "turnOff", "turnOn"]
 commands = ["hey BK", "turn off", "turn on"]
