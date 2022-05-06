@@ -12,4 +12,4 @@ def predict(request):
     decode_text = base64.b64decode(encode_text)
     file_wav = open('temp.wav', 'wb')
     file_wav.write(decode_text)
-    return Response({'result': "getPredict('temp.wav')"})
+    return Response({'result': getPredict('temp.wav')})
