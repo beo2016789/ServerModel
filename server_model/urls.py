@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path('predict/', views.predict),
+    path('', views.index)
 ]

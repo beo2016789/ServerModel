@@ -13,3 +13,8 @@ def predict(request):
     file_wav = open('temp.wav', 'wb')
     file_wav.write(decode_text)
     return Response({'result': getPredict('temp.wav')})
+
+@api_view(['GET'])
+def index(request):
+    return Response({'result': "success"})
+    
