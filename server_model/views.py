@@ -8,6 +8,7 @@ from .run_model import getPredict
 # Create your views here.
 @api_view(['POST'])
 def predict(request):
+    #asdsad
     encode_text = json.loads(request.body)['fileCode']
     decode_text = base64.b64decode(encode_text)
     file_wav = open('temp.wav', 'wb')
