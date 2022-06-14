@@ -27,7 +27,7 @@ def get_mfcc(file_path):
 
     X = np.concatenate([mfcc, delta1, delta2], axis=0)
     return X.T
-
+ 
 model = {}
 for key in labels:
     name = f"server_model/models/models_train_model_{key}.pkl"
