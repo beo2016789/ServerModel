@@ -6,8 +6,8 @@ import pickle
 import warnings
 warnings.filterwarnings("ignore")
 
-labels = ["BK", "turnOff", "turnOn"]
-commands = ["hey BK", "turn off", "turn on"]
+labels = ["BD", "TD", "BQ", "TQ"]
+commands = ["bật đèn", "tắt đèn", "bật quạt", "tắt quạt"]
 
 def removeSilence(audio):
     clip = librosa.effects.trim(audio, top_db = 10)
@@ -38,4 +38,4 @@ def getPredict(filePath):
     record_mfcc = get_mfcc(filePath)
     scores = [model[label].score(record_mfcc) for label in labels]
     index = np.argmax(scores)
-    return commands[index]
+    return commands[index], index
