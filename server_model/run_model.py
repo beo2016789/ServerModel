@@ -30,7 +30,7 @@ def get_mfcc(file_path):
  
 model = {}
 for key in labels:
-    name = f"server_model/models/models_train_model_{key}.pkl"
+    name = f"server_model/models/model_{key}.pkl"
     with open(name, 'rb') as file:
         model[key] = pickle.load(file)
 
